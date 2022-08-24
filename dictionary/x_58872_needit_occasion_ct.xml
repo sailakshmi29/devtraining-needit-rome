@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Occasion-CT" max_length="40" name="x_58872_needit_occasion_ct" type="collection">
+        <element label="Employee" max_length="32" name="employee" reference="sys_user" type="reference"/>
+        <element label="Number" max_length="8" name="number" type="string"/>
+        <element label="Occasion Date" max_length="40" name="occasion_date" type="glide_date"/>
+        <element choice="1" label="special Occasion" max_length="40" name="special_occasion" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Work Anniversary" sequence="100" value="work_anniversary"/>
+                <element inactive_on_update="false" label="Birthday" sequence="200" value="birthday"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>
